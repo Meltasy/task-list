@@ -1,0 +1,246 @@
+:root,
+:root .green {
+    --text-color: #001C08;
+    --background-color: #D5E6DA;
+    --primary-color-light: #68A38E;
+    --primary-color-dark: #044830;
+    --secondary-color-light: #96CE84;
+    --secondary-color-dark: #1A5B05;
+}
+
+:root .blue {
+    --text-color: #01031A;
+    --background-color: #D3D4E2;
+    --primary-color-light: #7B73A8;
+    --primary-color-dark: #160D4A;
+    --secondary-color-light: #6E7EA2;
+    --secondary-color-dark: #0B1D48;
+}
+
+:root .purple {
+    --text-color: #110019;
+    --background-color: #DACFDF;
+    --primary-color-light: #9E659E;
+    --primary-color-dark: #460446;
+    --secondary-color-light: #896DA4;
+    --secondary-color-dark: #290948;
+}
+
+:root .orange {
+    --text-color: #251000;
+    --background-color: #FFF4EC;
+    --primary-color-light: #F2C99B;
+    --primary-color-dark: #6B3B06;
+    --secondary-color-light: #F2B39B;
+    --secondary-color-dark: #6B2106;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: minmax(200px, 2fr) minmax(400px, 4fr);
+    grid-template-rows: minmax(min-content, 1fr) minmax(600px, 6fr);
+}
+
+#menu {
+    grid-column-start: 1;
+    grid-row-start: 1 / 3;
+    background-color: var(--secondary-color-light);
+}
+
+#projectContent {
+    grid-column: 2;
+    grid-row-start: 1 / 3;
+}
+
+h1 {
+    font-size: calc(2rem + 0.3vw);
+    padding: 0px 20px;
+}
+
+h2 {
+    font-size: calc(1.5rem + 0.2vw);
+    padding: 20px 0px 0px 20px;
+}
+
+h3 {
+    font-size: calc(1.5rem + 0.2vw);
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+::backdrop {
+    background-color: var(--secondary-color-light);
+    opacity: 0.75;
+}
+
+:modal {
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 5px var(--primary-color-dark);
+    border: none;
+}
+
+#menu li {
+    padding: none;
+    display: flex;
+}
+
+#menu button {
+    appearance: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: calc(1.2rem + 0.2vw);
+    color: inherit;
+    background-color: inherit;
+    display: grid;
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+#eachProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#eachProject div {
+    display: flex;
+    align-items: center;
+}
+
+dialog input,
+dialog select,
+dialog button,
+dialog textarea {
+    appearance: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: calc(1rem + 0.2vw);
+    color: inherit;
+    padding: 10px;
+    margin: 10px 20px;
+    background-color: var(--primary-color-light);
+    box-shadow: 2px 2px 2px var(--primary-color-dark);
+}
+
+dialog input,
+dialog textarea {
+    display: inline-block;
+}
+
+dialog button:hover,
+dialog button:focus {
+    color: var(--background-color);
+    background-color: var(--primary-color-dark);
+}
+
+#extras button {
+    background-color: var(--secondary-color-light);
+    box-shadow: 2px 2px 2px var(--secondary-color-dark);
+}
+
+#extras button:hover,
+#extras button:focus,
+#menu button:hover,
+#menu button:focus {
+    color: var(--background-color);
+    background-color: var(--secondary-color-dark);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 5px 20px;
+    font-size: calc(1rem + 0.2vw);
+}
+
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 2px var(--primary-color-dark);
+    transition: 0.2s all linear;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--primary-color-dark);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#priorityList li,
+ul#projectList li,
+ul#colorThemeList li {
+    display: flex;
+    align-items: center;
+}
+
+ul#priorityList li label,
+ul#projectList li label,
+ul#colorThemeList li label {
+    padding: 10px 15px;
+}
+
+ul#priorityList li label,
+ul#colorThemeList li label {
+    box-shadow: 2px 2px 2px var(--text-color);
+}
+
+ul#projectList li label {
+    background-color: var(--secondary-color-light);
+    box-shadow: 2px 2px 2px var(--secondary-color-dark);
+}
+
+#projectContent li {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--primary-color-light);
+    box-shadow: 5px 5px 5px var(--primary-color-dark);
+}
+
+#projectContent button {
+    appearance: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    display: grid;
+    text-align: left;
+}
+
+#eachTask {
+    display: flex;
+    justify-content: space-between;
+}
+
+#displayTask {
+    flex-grow: 1;
+}
+
+#projectContent div.priority {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    border: none;
+    box-shadow: 2px 2px 2px var(--text-color);
+}
+
+#deleteTask,
+#deleteProject,
+#editProject {
+    opacity: 0.7;
+}
